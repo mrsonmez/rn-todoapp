@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+import { Header } from "react-native/Libraries/NewAppScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.headerContainer}>
+        <Text style={styles.title}>Yapılacaklar</Text>
+        <Text style={styles.counter}>0</Text>
+      </View>
     </View>
   );
 }
@@ -13,8 +15,20 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#102027",
+  },
+  headerContainer: {
+    flexDirection: "row",
+  },
+  title: {
+    fontSize: 24,
+    color: "#ffa500",
+    padding: 10,
+  },
+  counter: {
+    fontSize: 24,
+    color: "#ffa500",
+    padding: 10,
+    marginLeft: "auto",
   },
 });
